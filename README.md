@@ -22,6 +22,6 @@ node xml2table.js infile.xml > outfile.html
 ```
 
 ### Sample result in browser
-![](demo/demo.png?raw=true | width=360)
+<img src="demo/demo.png?raw=true" width="360">
 
 
