@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
-
-const $jsonFile = process.argv[2]; //'./composer.json'
-
-const $jsonData = fs.readFileSync( $jsonFile, { encoding: 'utf8', flag: 'r' });
+const convert = require('xml-js');
+const $fileName = process.argv[2]; 
+const $fileData = fs.readFileSync( $fileName, { encoding: 'utf8', flag: 'r' });
+var $jsonData = convert.xml2json($fileData , {compact: true, spaces: 4});
 
 function processElement( $in ){
     if( typeof $in != 'object' ){

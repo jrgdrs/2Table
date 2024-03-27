@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
-
-const $jsonFile = process.argv[2]; //'./composer.json'
-
+const $jsonFile = process.argv[2]; 
 const $jsonData = fs.readFileSync( $jsonFile, { encoding: 'utf8', flag: 'r' });
 
 function processElement( $in ){
