@@ -6,7 +6,7 @@ const $fileData = fs.readFileSync( $fileName, { encoding: 'utf8', flag: 'r' });
 var $jsonData = convert.xml2json($fileData , {compact: true, spaces: 4});
 
 function processElement( $in ){
-    if( typeof $in != 'object' ){
+    if( typeof $in != 'object' || $in === null ){
         return $in;
     } else {
         let $out = '<table>';

@@ -4,7 +4,7 @@ const $jsonFile = process.argv[2];
 const $jsonData = fs.readFileSync( $jsonFile, { encoding: 'utf8', flag: 'r' });
 
 function processElement( $in ){
-    if( typeof $in != 'object' ){
+    if( typeof $in != 'object' || $in === null ){
         return $in;
     } else {
         let $out = '<table>';

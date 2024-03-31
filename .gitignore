@@ -2,3 +2,5 @@
 node_modules/*
 tests/*
 2024-03-15/*
+demo/*
+.DS_Store
